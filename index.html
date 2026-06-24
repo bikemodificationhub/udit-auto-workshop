@@ -1,44 +1,167 @@
 
 
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>JARVIS SYSTEM</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UDIT AUTO WORKSHOP</title>
 
 <style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
 body{
-background:black;
-color:#00ffff;
-font-family:Arial;
+background:#000;
+color:#fff;
+}
+
+header{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-padding-top:100px;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+url('workshop.jpg');
+background-size:cover;
+background-position:center;
 }
 
-h1{
-font-size:50px;
-text-shadow:0 0 20px #00ffff;
+header h1{
+font-size:60px;
+color:red;
+text-shadow:0 0 20px red;
 }
 
-.box{
-border:2px solid #00ffff;
-width:300px;
+header p{
+font-size:22px;
+margin-top:15px;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:12px 25px;
+background:red;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+section{
+padding:60px 20px;
+max-width:1100px;
 margin:auto;
-padding:20px;
-box-shadow:0 0 20px #00ffff;
 }
 
+h2{
+color:red;
+margin-bottom:25px;
+text-align:center;
+font-size:35px;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#111;
+padding:20px;
+border-left:4px solid red;
+border-radius:10px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:10px;
+border:2px solid red;
+}
+
+.contact{
+text-align:center;
+font-size:22px;
+line-height:2;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#111;
+margin-top:30px;
+}
 </style>
 </head>
 
 <body>
 
-<h1>JARVIS ONLINE</h1>
+<header>
+<h1>UDIT AUTO WORKSHOP</h1>
+<p>Bike Servicing • Engine Repair • Modification • Vinyl Wrapping</p>
+<a href="tel:8445281466" class="btn">📞 Call Now</a>
+</header>
 
-<div class="box">
-<h2>Hello Boss</h2>
-<p>All Systems Ready</p>
-<p>Bike Modification Hub</p>
+<section>
+<h2>Our Services</h2>
+
+<div class="services">
+<div class="card">🏍 Bike Servicing</div>
+<div class="card">🔧 Engine Repair</div>
+<div class="card">🎨 Vinyl Wrapping</div>
+<div class="card">🖼 Sticker & Graphics</div>
+<div class="card">💡 LED & Electrical Work</div>
+<div class="card">⚙ Accessories Fitting</div>
 </div>
+
+</section>
+
+<section>
+<h2>Our Work</h2>
+
+<div class="gallery">
+<img src="engine.jpg" alt="">
+<img src="wrapping.jpg" alt="">
+<img src="bike1.jpg" alt="">
+<img src="workshop.jpg" alt="">
+</div>
+
+</section>
+
+<section>
+<h2>Contact Us</h2>
+
+<div class="contact">
+📍 Airwa Katra, Auraiya, Uttar Pradesh<br>
+📞 8445281466<br>
+📞 6395667846<br><br>
+
+<a class="btn" href="tel:8445281466">Call Now</a>
+<a class="btn" href="https://wa.me/918445281466">WhatsApp</a>
+</div>
+
+</section>
+
+<footer>
+© 2026 UDIT AUTO WORKSHOP | All Rights Reserved
+</footer>
 
 </body>
 </html>
