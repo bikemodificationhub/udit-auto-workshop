@@ -1,5 +1,5 @@
 
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -28,6 +28,13 @@ width:90%;
 .banner{
 width:100%;
 display:block;
+border-radius:12px;
+}
+
+.slider img{
+width:100%;
+display:block;
+border-radius:12px;
 }
 
 .container{
@@ -96,6 +103,25 @@ border:1px solid #ccc;
 border-radius:8px;
 box-sizing:border-box;
 }
+
+.social-bar{
+position:fixed;
+bottom:10px;
+right:10px;
+display:flex;
+flex-direction:column;
+gap:10px;
+z-index:999;
+}
+
+.social-bar a{
+background:#d60000;
+color:white;
+padding:10px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+}
 </style>
 </head>
 
@@ -106,19 +132,24 @@ box-sizing:border-box;
 src="file_000000008fb8723082b959c2c44634be.png">
 </header>
 
-<img class="banner"
-src="file_000000007f3c7230b070d07f872474c1.png">
+<div class="slider">
+<a id="slideLink"
+href="file_00000000a687207a4e8906817ba1c45.png"
+target="_blank">
+
+<img id="slide"
+class="banner"
+src="file_00000000a687207a4e8906817ba1c45.png">
+
+</a>
+</div>
 
 <div class="container">
 
 <div class="card">
-<h2>🔥 BEST OFFER 🔥</h2>
-<p style="font-size:22px;text-align:center;font-weight:bold;">
-🔥 Full Engine Repair Karvao Aur 1 Service FREE Pao
-</p>
-<p style="text-align:center;color:red;font-weight:bold;">
-⏳ Limited Time Offer
-</p>
+<img src="file_0000000075d872308ae67e5fc69636e3.png"
+style="width:100%;border-radius:12px;"
+alt="Best Offer">
 </div>
 
 <div class="card">
@@ -190,7 +221,6 @@ target="_blank">
 </div>
 
 <div class="card">
-
 <h2>Contact Us</h2>
 
 <a class="call-btn"
@@ -210,15 +240,69 @@ href="https://wa.me/916395667846">
 
 </div>
 
+<div class="card">
+<h2>📱 Follow Us</h2>
+
+<a class="call-btn"
+href="https://www.instagram.com/bike_modification_hub?igsh=MXIyN3h2NnBha25sZA=="
+target="_blank">
+📸 Follow On Instagram
+</a>
+
+<a class="call-btn"
+href="https://youtube.com/@modification_with_saurabh?si=4N6OI9Y55-ZSVTi2"
+target="_blank">
+▶️ Subscribe On YouTube
+</a>
+
+</div>
+
+</div>
+
+<div class="social-bar">
+
+<a href="https://www.instagram.com/bike_modification_hub?igsh=MXIyN3h2NnBha25sZA=="
+target="_blank">
+📸
+</a>
+
+<a href="https://youtube.com/@modification_with_saurabh?si=4N6OI9Y55-ZSVTi2"
+target="_blank">
+▶️
+</a>
+
 </div>
 
 <script>
+
+const images = [
+"file_00000000a687207a4e8906817ba1c45.png",
+"file_000000000fc071fab5d60e5d0c2337ce.png",
+"file_00000000890471fa8bcd42cdfdf256f2.png",
+"file_00000000b6c87209a87314a8d7b67815.png",
+"file_00000000cc4c71faa8d3edd6137782ec.png",
+"file_00000000f9fc71fab842b2618a24da9a.png",
+"file_00000000f5a4720681100e910869da1d.png",
+"file_00000000e1e871fa8c74f132808a4241.png"
+];
+
+let current = 0;
+
+setInterval(() => {
+current = (current + 1) % images.length;
+
+document.getElementById("slide").src = images[current];
+document.getElementById("slideLink").href = images[current];
+
+}, 3000);
+
 function sendMsg(service){
 window.open(
 "https://wa.me/916395667846?text=Hello UDIT AUTO WORKSHOP, Mujhe "+service+" karwana hai.",
 "_blank"
 );
 }
+
 </script>
 
 </body>
