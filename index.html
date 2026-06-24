@@ -7,104 +7,85 @@
 <title>UDIT AUTO WORKSHOP</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
 body{
-background:#000;
-color:#fff;
+margin:0;
+font-family:Arial,sans-serif;
+background:#f5f5f5;
 }
 
 header{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
+background:white;
+padding:10px;
 text-align:center;
-background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
-url('workshop.jpg');
-background-size:cover;
-background-position:center;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
-header h1{
-font-size:60px;
-color:red;
-text-shadow:0 0 20px red;
+.logo{
+max-width:250px;
+width:90%;
 }
 
-header p{
-font-size:22px;
-margin-top:15px;
+.banner{
+width:100%;
+display:block;
 }
 
-.btn{
-display:inline-block;
-margin-top:25px;
-padding:12px 25px;
-background:red;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
-}
-
-section{
-padding:60px 20px;
-max-width:1100px;
-margin:auto;
-}
-
-h2{
-color:red;
-margin-bottom:25px;
-text-align:center;
-font-size:35px;
-}
-
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+.container{
+padding:15px;
 }
 
 .card{
-background:#111;
-padding:20px;
-border-left:4px solid red;
-border-radius:10px;
+background:white;
+padding:15px;
+margin-bottom:15px;
+border-radius:12px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
+h2{
+color:#d60000;
+text-align:center;
 }
 
-.gallery img{
+.service-btn{
+display:block;
 width:100%;
-height:250px;
-object-fit:cover;
+padding:15px;
+margin:10px 0;
+border:none;
 border-radius:10px;
-border:2px solid red;
-}
-
-.contact{
-text-align:center;
-font-size:22px;
-line-height:2;
-}
-
-footer{
-text-align:center;
-padding:20px;
 background:#111;
-margin-top:30px;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
+
+.service-btn:hover{
+background:#d60000;
+}
+
+.call-btn{
+display:block;
+text-align:center;
+padding:15px;
+background:green;
+color:white;
+text-decoration:none;
+font-size:20px;
+border-radius:10px;
+margin-top:10px;
+}
+
+.whatsapp{
+display:block;
+text-align:center;
+padding:15px;
+background:#25D366;
+color:white;
+text-decoration:none;
+font-size:20px;
+border-radius:10px;
+margin-top:10px;
 }
 </style>
 </head>
@@ -112,54 +93,81 @@ margin-top:30px;
 <body>
 
 <header>
-<h1>UDIT AUTO WORKSHOP</h1>
-<p>Bike Servicing • Engine Repair • Modification • Vinyl Wrapping</p>
-<a href="tel:8445281466" class="btn">📞 Call Now</a>
+<img class="logo"
+src="file_000000008fb8723082b959c2c44634be.png">
 </header>
 
-<section>
-<h2>Our Services</h2>
+<img class="banner"
+src="file_000000007f3c7230b070d07f872474c1.png">
 
-<div class="services">
-<div class="card">🏍 Bike Servicing</div>
-<div class="card">🔧 Engine Repair</div>
-<div class="card">🎨 Vinyl Wrapping</div>
-<div class="card">🖼 Sticker & Graphics</div>
-<div class="card">💡 LED & Electrical Work</div>
-<div class="card">⚙ Accessories Fitting</div>
+<div class="container">
+
+<div class="card">
+<h2>Choose Service</h2>
+
+<button class="service-btn"
+onclick="sendMsg('Bike Modification')">
+🏍 Bike Modification
+</button>
+
+<button class="service-btn"
+onclick="sendMsg('Bike Repairing')">
+🔧 Bike Repairing
+</button>
+
+<button class="service-btn"
+onclick="sendMsg('Bike Service')">
+🛠 Bike Service
+</button>
+
+<button class="service-btn"
+onclick="sendMsg('Engine Work')">
+⚙ Engine Work
+</button>
+
+<button class="service-btn"
+onclick="sendMsg('LED & Electrical Work')">
+💡 LED & Electrical Work
+</button>
+
+<button class="service-btn"
+onclick="sendMsg('Sticker & Vinyl Wrapping')">
+🎨 Sticker & Vinyl Wrapping
+</button>
+
 </div>
 
-</section>
+<div class="card">
 
-<section>
-<h2>Our Work</h2>
-
-<div class="gallery">
-<img src="engine.jpg" alt="">
-<img src="wrapping.jpg" alt="">
-<img src="bike1.jpg" alt="">
-<img src="workshop.jpg" alt="">
-</div>
-
-</section>
-
-<section>
 <h2>Contact Us</h2>
 
-<div class="contact">
-📍 Airwa Katra, Auraiya, Uttar Pradesh<br>
-📞 8445281466<br>
-📞 6395667846<br><br>
+<a class="call-btn"
+href="tel:9580841419">
+📞 Modification Call
+</a>
 
-<a class="btn" href="tel:8445281466">Call Now</a>
-<a class="btn" href="https://wa.me/918445281466">WhatsApp</a>
+<a class="call-btn"
+href="tel:6395667846">
+📞 Repairing Call
+</a>
+
+<a class="whatsapp"
+href="https://wa.me/919580841419">
+💬 WhatsApp Now
+</a>
+
 </div>
 
-</section>
+</div>
 
-<footer>
-© 2026 UDIT AUTO WORKSHOP | All Rights Reserved
-</footer>
+<script>
+function sendMsg(service){
+window.open(
+"https://wa.me/919580841419?text=Hello UDIT AUTO WORKSHOP, Mujhe "+service+" karwana hai.",
+"_blank"
+);
+}
+</script>
 
 </body>
 </html>
