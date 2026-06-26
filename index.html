@@ -1,256 +1,870 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="MQpXQLI6s7PORFtxODQRFt3qzuvGvfz8Rkgm0Ajpl6Y" />
+
 <title>UDIT AUTO WORKSHOP</title>
-<meta name="description" content="UDIT AUTO WORKSHOP - Bike Modification, Bike Repairing, Bike Service, Engine Work, LED & Electrical Work, Sticker & Vinyl Wrapping. Contact: 9580841419">
-
-<meta name="keywords" content="UDIT AUTO WORKSHOP, bike modification, bike repair, bike service, engine work, bike workshop, motorcycle repair">
-
-<meta name="robots" content="index, follow">
-  <link rel="icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="favicon.png">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Bebas Neue',sans-serif;
+font-family:'Oswald',sans-serif;
 }
 
 body{
-background:#ffffff;
-color:#111;
+background:#050505;
+color:white;
+overflow-x:hidden;
 }
 
-header{
-text-align:center;
-padding:20px;
-background:white;
+/* TOP BAR */
+
+.topbar{
+background:#000;
+padding:8px 20px;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+font-size:14px;
+border-bottom:1px solid #222;
+}
+
+.topbar span{
+color:#fff;
+margin:5px;
+}
+
+.open{
+color:#00ff66;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+background:rgba(0,0,0,.85);
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+z-index:999;
 }
 
 .logo{
-width:180px;
+font-size:34px;
+font-weight:700;
+color:white;
 }
 
-.banner img{
-width:100%;
-display:block;
+.logo span{
+color:red;
 }
+
+.menu{
+display:flex;
+gap:25px;
+}
+
+.menu a{
+text-decoration:none;
+color:white;
+font-size:18px;
+transition:.3s;
+}
+
+.menu a:hover{
+color:red;
+}
+
+.book-btn{
+background:red;
+padding:12px 25px;
+border-radius:8px;
+text-decoration:none;
+color:white;
+}
+
+/* HERO */
 
 .hero{
-text-align:center;
-padding:50px 20px;
+min-height:85vh;
+background:
+linear-gradient(rgba(0,0,0,.65),
+rgba(0,0,0,.65)),
+url('splendor-banner.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding:60px;
+}
+
+.hero-content{
+max-width:650px;
 }
 
 .hero h1{
-font-size:60px;
-color:#e60000;
-letter-spacing:2px;
+font-size:80px;
+line-height:90px;
+}
+
+.hero h1 span{
+color:red;
 }
 
 .hero p{
 font-size:24px;
-margin-top:10px;
+margin-top:20px;
+color:#ddd;
 }
 
-.btn{
-display:inline-block;
+.hero-buttons{
+margin-top:30px;
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.service-btn{
+background:red;
 padding:15px 30px;
-margin:10px;
-background:#e60000;
-color:white;
+border-radius:12px;
 text-decoration:none;
+color:white;
+font-size:20px;
+box-shadow:0 0 20px rgba(255,0,0,.5);
+}
+
+.repair-btn{
+background:#111;
+border:2px solid red;
+}
+
+/* EMERGENCY */
+
+.emergency{
+width:95%;
+margin:auto;
+margin-top:-40px;
+background:rgba(255,0,0,.08);
+border:1px solid rgba(255,0,0,.3);
+backdrop-filter:blur(12px);
+padding:25px;
+border-radius:18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.emergency h2{
+color:#ff3b3b;
+}
+
+.help-btn{
+background:red;
+padding:15px 30px;
 border-radius:10px;
-font-size:22px;
+text-decoration:none;
+color:white;
+font-size:20px;
 }
 
-.section{
+/* SEARCH */
+
+.search-box{
+width:95%;
+margin:25px auto;
+}
+
+.search-box input{
+width:100%;
+padding:18px;
+background:#111;
+border:1px solid #333;
+border-radius:12px;
+color:white;
+font-size:18px;
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:25px;
+}
+
+.hero h1{
+font-size:50px;
+line-height:55px;
+}
+
+.menu{
+display:none;
+}
+
+.topbar{
+font-size:12px;
+}
+
+}
+/* CATEGORIES */
+
+.categories{
 padding:40px 20px;
+}
+
+.title{
 text-align:center;
+font-size:40px;
+color:#fff;
+margin-bottom:25px;
 }
 
-.section h2{
-font-size:45px;
-color:#e60000;
-margin-bottom:20px;
+.red{
+color:#ff2a2a;
 }
 
-.gallery{
+.cat-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
+}
+
+.cat-card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,0,0,0.3);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:15px;
+text-align:center;
+font-size:28px;
+color:white;
+transition:.3s;
+}
+
+.cat-card:hover{
+transform:translateY(-5px);
+border-color:red;
+box-shadow:0 0 20px red;
+}
+
+.cat-card span{
+display:block;
+margin-top:10px;
+font-size:18px;
+}
+
+/* SERVICES */
+
+.service-section{
+padding:50px 20px;
+}
+
+.service-number{
+text-align:center;
+font-size:22px;
+color:#ff2a2a;
+margin-bottom:25px;
+}
+
+.service-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:15px;
-padding:10px;
 }
 
-.gallery img{
-width:100%;
+.service-card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,0,0,0.3);
+backdrop-filter:blur(10px);
+padding:25px;
 border-radius:15px;
-}
-
-.contact{
-background:#f5f5f5;
-padding:40px;
-text-align:center;
-}
-
-.social{
-margin-top:20px;
-}
-
-.social a{
-display:inline-block;
-margin:10px;
-font-size:22px;
-text-decoration:none;
 color:white;
-padding:12px 20px;
-border-radius:8px;
+font-size:20px;
+transition:.3s;
 }
 
-.youtube{
-background:red;
-}
-
-.instagram{
-background:#d62976;
-}
-
-footer{
-background:#111;
-color:white;
-padding:20px;
-text-align:center;
-}
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:18px;
-border-radius:50%;
-font-size:30px;
-text-decoration:none;
+.service-card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px red;
+border-color:red;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<img src="logo.png" class="logo">
-</header>
+<div class="topbar">
 
-<div class="banner">
-<img src="banner.jpg">
+<span>📍 Airwa Block Ke Paas, Bidhuna Road</span>
+
+<span class="open">🟢 Open Now</span>
+
+<span>📞 6395667846 (Repairing)</span>
+
+<span>📞 9580841419 (Modification)</span>
+
 </div>
+
+<nav class="navbar">
+
+<div class="logo">
+UDIT <span>AUTO WORKSHOP</span>
+</div>
+
+<div class="menu">
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">Gallery</a>
+<a href="#">Reviews</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</div>
+
+<a href="#" class="book-btn">BOOK SERVICE</a>
+
+</nav>
 
 <section class="hero">
-<h1>UDIT AUTO WORKSHOP</h1>
-<p>Bike Modification • Repairing • Premium Finish</p>
 
-<a class="btn" href="https://wa.me/919580841419">
-📱 Book On WhatsApp
-</a>
-</section>
-<section class="section">
-<h2>OUR SERVICES</h2>
+<div class="hero-content">
 
-<div class="team">
+<h1>
+RIDE STRONG.<br>
+<span>RIDE PROUD.</span>
+</h1>
 
-<div class="card">
-<h3>🏍 Bike Modification</h3>
-<a class="btn" href="https://wa.me/919580841419?text=I%20want%20Bike%20Modification">Book Now</a>
-</div>
+<p>
+Professional Bike Modification & Repairing
+Services Under One Roof.
+</p>
 
-<div class="card">
-<h3>🔧 Bike Repairing</h3>
-<a class="btn" href="https://wa.me/919580841419?text=I%20want%20Bike%20Repairing">Book Now</a>
-</div>
+<div class="hero-buttons">
 
-<div class="card">
-<h3>🛠 Bike Service</h3>
-<a class="btn" href="https://wa.me/919580841419?text=I%20want%20Bike%20Service">Book Now</a>
-</div>
-
-<div class="card">
-<h3>⚙ Engine Work</h3>
-<a class="btn" href="https://wa.me/919580841419?text=I%20want%20Engine%20Work">Book Now</a>
-</div>
-
-<div class="card">
-<h3>💡 LED & Electrical Work</h3>
-<a class="btn" href="https://wa.me/919580841419?text=I%20want%20LED%20and%20Electrical%20Work">Book Now</a>
-</div>
-
-<div class="card">
-<h3>🎨 Sticker & Vinyl Wrapping</h3>
-<a class="btn" href="https://wa.me/919580841419?text=I%20want%20Sticker%20and%20Vinyl%20Wrapping">Book Now</a>
-</div>
-
-</div>
-</section>
-<section class="section">
-<h2>OUR WORKSHOP</h2>
-<img src="workshop.jpg" width="90%" style="border-radius:20px;">
-</section>
-
-<section class="section">
-<h2>BIKE MODIFICATION GALLERY</h2>
-
-<div class="gallery">
-<img src="mod1.jpg">
-<img src="mod2.jpg">
-<img src="mod3.jpg">
-<img src="mod4.jpg">
-<img src="mod5.jpg">
-</div>
-
-</section>
-
-<section class="contact">
-
-<h2>CONTACT US</h2>
-
-<h3>📞 9580841419</h3>
-<h3>📞 6395667846</h3>
-
-<br>
-
-<h3>📍 Airwa Block Ke Paas, Bidhuna Road</h3>
-
-<div class="social">
-
-<a class="youtube"
-href="https://youtube.com/@modification_with_saurabh?si=6b1cKI_PdaE4EMMs">
-▶ YouTube Channel
+<a href="tel:9580841419" class="service-btn">
+Modification Services
 </a>
 
-<a class="instagram"
-href="https://www.instagram.com/bike_modification_hub?igsh=MXIyN3h2NnBha25sZA==">
-📸 Instagram
+<a href="tel:6395667846"
+class="service-btn repair-btn">
+Repairing Services
 </a>
 
 </div>
 
+</div>
+
 </section>
 
-<footer>
-© 2026 UDIT AUTO WORKSHOP
-</footer>
+<div class="emergency">
 
-<a class="whatsapp"
-href="https://wa.me/919580841419">
-💬
+<div>
+<h2>🚨 GADI RASTE ME KHARAB HO GAYI?</h2>
+<p>Turant Help Ke Liye Click Karein.</p>
+</div>
+
+<button onclick="toggleEmergency()" class="help-btn">
+HELP NOW
+</button>
+
+</div>
+
+<div class="search-box">
+<input type="text"
+placeholder="Search Services (Modification, Engine Work, LED Work...)">
+</div>
+<!-- CATEGORIES -->
+
+<section class="categories">
+
+<h2 class="title">OUR CATEGORIES</h2>
+
+<div class="cat-grid">
+
+<div class="cat-card">🏍<span>Modification</span></div>
+
+<div class="cat-card">🔧<span>Repairing</span></div>
+
+<div class="cat-card">🛠<span>Service</span></div>
+
+<div class="cat-card">⚙<span>Engine Work</span></div>
+
+<div class="cat-card">💡<span>LED Work</span></div>
+
+<div class="cat-card">🎨<span>Wrapping</span></div>
+
+<div class="cat-card">🚨<span>Emergency</span></div>
+
+<div class="cat-card">📸<span>Gallery</span></div>
+
+</div>
+
+</section>
+
+<!-- MODIFICATION -->
+
+<section class="service-section">
+
+<h2 class="title red">MODIFICATION SERVICES</h2>
+
+<p class="service-number">
+📞 9580841419
+</p>
+
+<div class="service-grid">
+
+<div class="service-card">
+🏍 Bike Modification
+</div>
+
+<div class="service-card">
+🎨 Sticker & Vinyl Wrapping
+</div>
+
+<div class="service-card">
+💡 Custom LED Setup
+</div>
+
+<div class="service-card">
+🔥 Bike Styling
+</div>
+
+<div class="service-card">
+⚡ Performance Upgrade
+</div>
+
+<div class="service-card">
+🛞 Alloy & Look Upgrade
+</div>
+
+</div>
+
+</section>
+
+<!-- REPAIRING -->
+
+<section class="service-section">
+
+<h2 class="title red">REPAIRING SERVICES</h2>
+
+<p class="service-number">
+📞 6395667846
+</p>
+
+<div class="service-grid">
+
+<div class="service-card">
+🔧 Bike Repairing
+</div>
+
+<div class="service-card">
+🛠 Full Bike Service
+</div>
+
+<div class="service-card">
+⚙ Engine Work
+</div>
+
+<div class="service-card">
+🔋 Electrical Work
+</div>
+
+<div class="service-card">
+🛑 Brake & Clutch Work
+</div>
+
+<div class="service-card">
+🔩 General Maintenance
+</div>
+
+</div>
+
+</section>
+<!-- WHY CHOOSE US -->
+
+<section class="service-section">
+
+<h2 class="title red">WHY CHOOSE UDIT AUTO WORKSHOP?</h2>
+
+<div class="service-grid">
+
+<div class="service-card">
+👨‍🔧 Expert Mechanics
+</div>
+
+<div class="service-card">
+✅ Genuine Parts
+</div>
+
+<div class="service-card">
+🛠 Advanced Tools
+</div>
+
+<div class="service-card">
+⭐ Customer Satisfaction
+</div>
+
+<div class="service-card">
+⚡ Fast Service
+</div>
+
+<div class="service-card">
+🏍 Bike Modification Experts
+</div>
+
+</div>
+
+</section>
+<!-- WORKSHOP GALLERY -->
+
+<section class="service-section">
+
+<h2 class="title red">WORKSHOP GALLERY</h2>
+
+<div class="service-grid">
+
+<div class="service-card">
+📸 Workshop Interior
+</div>
+
+<div class="service-card">
+🏍 Modified Bikes
+</div>
+
+<div class="service-card">
+🔧 Repair Work
+</div>
+
+<div class="service-card">
+⚙ Engine Work
+</div>
+
+<div class="service-card">
+💡 LED Projects
+</div>
+
+<div class="service-card">
+🎨 Sticker & Wrapping
+</div>
+
+</div>
+
+</section>
+<!-- CUSTOMER REVIEWS -->
+<section class="service-section">
+    <h2 class="title red">CUSTOMER REVIEWS</h2>
+
+    <div class="service-grid">
+
+        <div class="service-card">
+            ⭐⭐⭐⭐⭐
+            <br>
+            "Best bike modification shop in the area."
+            <br>
+            - Rahul
+        </div>
+
+        <div class="service-card">
+            ⭐⭐⭐⭐⭐
+            <br>
+            "Fast service and genuine parts."
+            <br>
+            - Aman
+        </div>
+
+        <div class="service-card">
+            ⭐⭐⭐⭐⭐
+            <br>
+            "LED work and wrapping quality is amazing."
+            <br>
+            - Saurabh
+        </div>
+
+    </div>
+</section>
+<section id="about" class="section">
+    <h2>ABOUT UDIT AUTO WORKSHOP</h2>
+    <p style="text-align:center;">
+        UDIT AUTO WORKSHOP mein Bike Modification, Repairing, Engine Work,
+        LED Setup aur Sticker Wrapping ki professional service di jati hai.
+    </p>
+</section>
+
+<section id="contact" class="section">
+    <h2>CONTACT US</h2>
+
+    <div class="service-card">
+        📞 Modification: 9580841419
+    </div>
+
+    <div class="service-card">
+        📞 Repairing: 6395667846
+    </div>
+
+    <div class="service-card">
+        📍 Airwa Block Ke Paas, Bidhuna Road
+    </div>
+
+    <div class="service-card">
+        💬 WhatsApp: 9580841419
+    </div>
+</section><div style="text-align:center; margin:10px 0 40px 0;">
+    <a href="https://wa.me/919580841419?text=Hello%20UDIT%20AUTO%20WORKSHOP"
+       style="background:#ff3b30;color:white;padding:15px 35px;
+       text-decoration:none;border-radius:10px;font-size:20px;
+       font-weight:bold;display:inline-block;">
+       BOOK SERVICE
+    </a>
+</div>
+<div style="text-align:center; margin:20px 0;">
+   
+    <a href="https://youtube.com/@modification_with_saurabh" target="_blank"
+    style="color:#ff0000; font-size:28px; margin:10px;">
+    <i class="fab fa-youtube"></i>
+    </a>
+
+    <a href="https://www.instagram.com/bike_modification_hub" target="_blank"
+    style="color:#E1306C; font-size:28px; margin:10px;">
+    <i class="fab fa-instagram"></i>
+    </a>
+
+</div>
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/919580841419?text=Hello%20UDIT%20AUTO%20WORKSHOP"
+   class="floating-whatsapp"
+   target="_blank">
+
+    <i class="fab fa-whatsapp"></i>
+
+    <div class="wa-text">
+        <span>WhatsApp Us</span>
+        <small>9580841419 | 6395667846</small>
+    </div>
+
 </a>
+
+<style>
+
+.floating-whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+color:#fff;
+padding:12px 18px;
+border-radius:50px;
+display:flex;
+align-items:center;
+gap:12px;
+text-decoration:none;
+font-family:Arial,sans-serif;
+box-shadow:0 0 20px rgba(37,211,102,.6);
+z-index:99999;
+animation:float 2s infinite;
+transition:.3s;
+}
+
+.floating-whatsapp i{
+font-size:34px;
+}
+
+.floating-whatsapp:hover{
+transform:scale(1.08);
+box-shadow:0 0 30px #25D366;
+}
+
+.wa-text{
+display:flex;
+flex-direction:column;
+line-height:1.2;
+}
+
+.wa-text span{
+font-size:15px;
+font-weight:bold;
+}
+
+.wa-text small{
+font-size:11px;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-6px);}
+}
+
+@media(max-width:768px){
+
+.floating-whatsapp{
+padding:10px 15px;
+right:15px;
+bottom:15px;
+}
+
+.floating-whatsapp i{
+font-size:30px;
+}
+
+.wa-text small{
+display:none;
+}
+
+}
+
+</style>
+<!-- Floating Call Button -->
+<a href="tel:+919580841419" class="floating-call">
+    📞
+</a>
+
+<style>
+.floating-call{
+    position:fixed;
+    bottom:95px;
+    right:20px;
+    width:60px;
+    height:60px;
+    background:#ff3b30;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    text-decoration:none;
+    box-shadow:0 0 20px rgba(255,59,48,.6);
+    z-index:9999;
+    animation:callFloat 2s infinite;
+}
+
+.floating-call:hover{
+    transform:scale(1.1);
+}
+
+@keyframes callFloat{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+}
+</style>
+<!-- Floating Location Button -->
+<a href="https://maps.app.goo.gl/p3GdRg5Gg7Vbz1u8A?g_st=ac"
+   class="floating-location"
+   target="_blank">
+    📍
+</a>
+
+<style>
+.floating-location{
+    position:fixed;
+    bottom:170px;
+    right:20px;
+    width:60px;
+    height:60px;
+    background:#2196F3;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    text-decoration:none;
+    box-shadow:0 0 20px rgba(33,150,243,.6);
+    z-index:9999;
+    animation:locationFloat 2s infinite;
+}
+
+.floating-location:hover{
+    transform:scale(1.1);
+}
+
+@keyframes locationFloat{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+}
+</style>
+<!-- EMERGENCY ROAD SERVICE -->
+<section id="emergencyForm" style="display:none;max-width:500px;margin:40px auto;padding:20px;background:#1b1b1b;border-radius:15px;text-align:center;">
+
+<h2 style="color:#25D366;">🚨 Emergency Road Service</h2>
+
+<input type="text" id="name" placeholder="Your Name"
+style="width:100%;padding:12px;margin:10px 0;border:none;border-radius:8px;">
+
+<input type="tel" id="phone" placeholder="Mobile Number"
+style="width:100%;padding:12px;margin:10px 0;border:none;border-radius:8px;">
+
+<input type="text" id="location" placeholder="Current Location"
+style="width:100%;padding:12px;margin:10px 0;border:none;border-radius:8px;">
+
+<textarea id="problem" placeholder="Bike Problem"
+style="width:100%;padding:12px;margin:10px 0;border:none;border-radius:8px;height:100px;"></textarea>
+
+<button onclick="sendEmergency()"
+style="background:#25D366;color:white;padding:15px 30px;border:none;border-radius:10px;font-size:18px;font-weight:bold;cursor:pointer;">
+🚨 Send on WhatsApp
+</button>
+
+</section>
+
+<script>
+function sendEmergency(){
+
+if (navigator.geolocation){
+
+navigator.geolocation.getCurrentPosition(function(position){
+
+let lat = position.coords.latitude;
+let lon = position.coords.longitude;
+
+let maps = "https://www.google.com/maps?q="+lat+","+lon;
+
+let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let location = document.getElementById("location").value;
+let problem = document.getElementById("problem").value;
+
+let msg = encodeURIComponent(
+"🚨 EMERGENCY SERVICE REQUEST\n\n"+
+"👤 Name: "+name+"\n"+
+"📞 Mobile: "+phone+"\n"+
+"📍 Location: "+location+"\n"+
+"🛰 Live GPS: "+maps+"\n"+
+"🔧 Problem: "+problem
+);
+
+window.open("https://wa.me/919580841419?text="+msg,"_blank");
+
+});
+
+}else{
+alert("Location not supported.");
+}
+
+}
+function toggleEmergency() {
+    var form = document.getElementById("emergencyForm");
+
+
+    if (form.style.display === "none") {
+        form.style.display = "block";
+        form.scrollIntoView({behavior:"smooth"});
+    } else {
+        form.style.display = "none";
+    }
+}
+</script>
 
 </body>
 </html>
